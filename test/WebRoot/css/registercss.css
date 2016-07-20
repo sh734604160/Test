@@ -1,0 +1,35 @@
+header{
+	margin:20px;
+	height:100px;
+	background-color:#144384;
+}
+header img{
+	height:80px;
+	width:320px;
+}
+body{
+		background-color:#144384;
+}
+.table1{
+	margin:0 auto;
+	color:#FFF;
+	font-size:50px;
+    font-family:"KaiTi";
+}
+.table2{
+    margin:0 auto;
+    font-size:20px;
+    font-family:"Microsoft YaHei";
+}
+.right{
+    text-align:right;
+    color:#FFF;
+}
+.color{
+    color:#FF8888;
+    font-size:15px;
+}
+.center{
+	text-align:center;
+	border-radius:10px;
+}

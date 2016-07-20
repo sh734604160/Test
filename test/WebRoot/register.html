@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html"; charset="UTF-8" />
+  <link href="css/registercss.css" rel="stylesheet" type="text/css"/ >
+   <script language="javascript">
+  function cheakrefister(theform){
+    var username=theform.username.value;
+    var password1=theform.password1.value;
+    var password2=theform.password2.value;
+    var password3=theform.password3.value;
+    var password4=theform.password4.value;
+    var name=theform.name.value;
+    var phone=theform.phone.value;
+    if(username==""){
+      alert("用户名不能为空！");
+      return false;
+    }
+    else if(password1==""){
+      alert("密码不能为空！");
+      return false;
+    }
+    else if(password2==""){
+      alert("密码不能为空！");
+      return false;
+    }
+    else if(password3==""){
+      alert("二级密码不能为空！");
+      return false;
+    }
+    else if(password4==""){
+      alert("二级密码不能为空！");
+      return false;
+    }
+    else if(password2!=password1){
+      alert("两次输入密码不相同！");
+      return false;
+    }
+    else if(password3!=password4){
+      alert("两次二级输入密码不相同！");
+      return false;
+    }
+    else if(name==""){
+      alert("姓名不能为空！");
+      return false;
+    }
+    else if(phone==""){
+      alert("电话不能为空！");
+      return false;
+    }
+    return true;
+  }
+  </script>
+  <title>注册新用户</title>
+</head>
+<body>
+<header>
+<img src="images/xidian.png">
+</header>
+<br>
+<br>
+<form  action="action/register.jsp" method="post" onsubmit="return cheakrefister(this);">
+<table class="table2">
+<tr><td class="right">账户名：</td><td><input type="text" name="username"></td><td class="right">请输入8~16位账户</td></tr>
+<tr><td class="right">密码：</td><td><input type="password" name="password1" ></td><td class="right">请输入8~16位密码</td></tr>
+<tr><td class="right">请再次输入密码：</td><td><input type="password" name="password2" ></td><td class="right">请输入8~16位密码</td></tr>
+<tr><td class="right" colspan="2"><span class="color">请确保两次密码输入相同</span></td></tr>
+<tr><td class="right">二级密码：</td><td><input type="password" name="password3" ></td><td class="right">6位数字，用于修改或找回密码</td></tr>
+<tr><td class="right">请再次输入二级密码：</td><td><input type="password" name="password4" ></td><td class="right">请确保两次输入相同输入</td></tr>
+<tr><td class="right">姓名：</td><td><input type="text" name="name"></td><td></td></tr>
+<tr><td class="right">性别：</td><td><input type="radio" name="sex" value="男" checked>男<input type="radio" value="女" name="sex">女</td><td></td></tr>
+<tr><td class="right">电话：</td><td><input type="text" name="phone"></td><td></td></tr>
+</table>
+<table class="table2">
+<tr><td class="center"><input  type="submit" value="确定"></td></tr>
+</table>
+</form> 
+</body>
+</html>
