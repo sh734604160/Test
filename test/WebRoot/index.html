@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html"; charset="UTF-8" />
+  <link href="css/indexcss.css" rel="stylesheet" type="text/css"/ >
+  <script language="javascript">
+  function validLogin(theform){
+    var username=theform.username.value;
+    var password=theform.password.value;
+    if(username==""){
+      alert("用户名不能为空！");
+      return false;
+    }
+    else if(password==""){
+      alert("密码不能为空！");
+      return false;
+    }
+    return true;
+  }
+  </script>
+  <title>欢迎使用西电二手物品交易平台</title>
+</head>
+<body>
+<header>
+<img src="images/xidian.png">
+</header>
+<br>
+<br>
+<table class="table1">
+<tr><td>欢迎使用西电二手物品交易平台
+</td>
+</tr>
+</table>
+<br>
+<br>
+<br>                                                                                                                                                                                                                                                                                                                                                                                                                                           
+<form action="action/login.jsp" method="post" onsubmit="return validLogin(this);">
+<table class="table2">
+<tr><td class="right">请输入账户名：</td><td><input type="text" name="username"></td></tr>
+<tr><td class="right">请输入密码：</td><td><input type="password" name="password" ></td></tr>
+<tr><td class="right">请选择登入方式：</td><td><select name="type"><option value="user" selected>用户</option><option value="Admintrator">管理员</option></select></td></tr>
+<tr><td class="center" colspan="2"><span class="color">新用户请点击下方注册按钮进行注册</span></td></tr>
+</table>
+<table class="table2">
+<tr><td class="center"><input  type="submit" value="登陆"></td>
+<td class="center"><a href="forget.html"><input  type="button" value="忘记密码"></a></td>
+<td class="center"><a href="register.html"><input  type="button" value="注册"></a></td></tr>
+</table>
+</form> 
+</body>
+</html>
